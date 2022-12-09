@@ -5,12 +5,11 @@ height: 20px;
   position: absolute;
   width: 200px;
   height: 100px;
-  left: 0;
-  background-color: blueviolet;
-  transform-origin: top left;
-  transition-property: transform;
+  left: 0px;
+  transform: translate(calc(100vw - 250px));
   transition-duration: 3s;
-  transform: translate(1000px);
+  transition-timing-function: cubic-bezier(.41,.63,.46,.92);
+
 }
 .carbody_alkop{
   position:absolute;
@@ -19,11 +18,10 @@ height: 20px;
   border: 3px solid black;
   left: 0px;
   bottom: 30px;
-  background-color: rgb(237 28 22);
-  background-image: url(img/coca.png);
+  background-color: rgb(216, 240, 35);
   background-size: cover;
   background-position: center;
-  z-index: 3;
+  z-index: 4;
 }
 .carcabin_alkop{
   position:absolute;
@@ -31,9 +29,37 @@ height: 20px;
   height: 55px;
   bottom: 12px;
   left: 130px;
-  background-color: rgb(52, 45, 187);
-  border-radius: 30% 75% 20% 10%;
+  background-color:  rgb(237 28 22);
+  border-radius: 30% 70% 20% 10%;
   border: 2px solid black;
+}
+.window {
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  background-color: white;
+  background-image: url(img/donkey.png);
+  background-position: bottom left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  bottom: 39px;
+  left: 152px;
+  border-radius: 30% 80% 20% 10%;
+  border: 1px solid black;
+  z-index: 3;
+}
+.logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 38px;
+  left: 45px;
+  background-image: url(img/elk.png);
+  background-position: center;
+  background-size: cover;
+  animation-name: shake;
+  animation-duration: 3s;
+  z-index: 4;
 }
 .coupl_alkop {
   position: absolute;
@@ -49,7 +75,7 @@ height: 20px;
   height: 10px;
   background-color: black;
   left: 8px;
-  bottom: 20px;
+  bottom: 22px;
 }
 .wheel_alkop {
   position:absolute;
@@ -57,11 +83,9 @@ height: 20px;
   bottom: 0px;
   width: 25px;
   height: 25px;
-  /* background-color: gray; */
-  border-top: 3px solid black;
-  /* border-bottom: black; */
-  border-radius: 56% 56% 48% 48%;
-  background-image: url(img/wheel1.png);
+  border: 1px solid white;
+  border-radius: 50%;
+  background-image: url(img/wheel2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -76,8 +100,6 @@ height: 20px;
 .right_alkop {
   position: absolute;
   left: 150px;
-  border-top: 3px solid gray;
-  border-radius: 50%;
 }
 .middle_alkop {
   position: absolute;
@@ -86,10 +108,85 @@ height: 20px;
 .wing_alkop {
   position:absolute;
   left: 15px;
-  bottom: 12px;
+  bottom: 14px;
   width: 60px;
   height: 15px;
   background-color: grey;
   border: 2px solid black;
   border-radius: 60% 60% 15% 15%
+}
+@keyframes wheel_rotate {
+  10% {
+    transform: rotate(20deg);
+}
+  20% {
+    transform: rotate(40deg);
+}
+  30% {
+    transform: rotate(70deg);
+}
+  40% {
+  transform: rotate(100deg);
+}
+  50% {
+  transform: rotate(130deg);
+}
+ 60% {
+  transform: rotate(160deg);
+ }
+ 70% {
+  transform: rotate(190deg);
+ }
+  80% {
+    transform: rotate(220deg);
+  }
+  90% {
+    transform: rotate(240deg);
+  }
+  100% {
+    transform: rotate(250deg);
+  }
+}
+
+@keyframes shake {
+  10% {
+    transform: translate(0, 3px);
+    transform: rotate(7deg);
+}
+  20% {
+    transform: translate(0, -3px);
+    transform: rotate(-9deg);
+}
+  30% {
+    transform: translate(0, 3px);
+    transform: rotate(12deg);
+}
+  40% {
+  transform: translate(0, -3px);
+  transform: rotate(-15deg);
+}
+  50% {
+  transform: translate(0, 3px);
+  transform: rotate(18deg);
+}
+ 60% {
+  transform: translate(0, -3px);
+  transform: rotate(-15deg);
+ }
+ 70% {
+  transform: translate(0, 3px);
+  transform: rotate(12deg);
+ }
+  80% {
+    transform: translate(0, -3px);
+    transform: rotate(-9deg);
+  }
+  90% {
+    transform: translate(0, 3px);
+    transform: rotate(7deg);
+  }
+  100% {
+    transform: translate(0, -7px);
+    /* transform: rotate(-5deg); */
+  }
 }
